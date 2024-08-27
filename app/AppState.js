@@ -3,6 +3,7 @@ import { createObservableProxy } from './utils/ObservableProxy.js'
 import { VendingItem } from './models/VendingItem.js'
 
 class ObservableAppState extends EventEmitter {
+  money = 1
   usedCodes = ['00']
   itemList = [
     new VendingItem('Doritos', 1.25),
@@ -11,6 +12,9 @@ class ObservableAppState extends EventEmitter {
     new VendingItem('Cheez-its', 1.25),
     new VendingItem('Gatorade', 1.00)
   ]
+
+  boughtItems = []
+
   currentCode = ''
 
 }

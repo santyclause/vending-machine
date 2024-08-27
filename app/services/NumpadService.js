@@ -1,4 +1,5 @@
 import { AppState } from "../AppState.js";
+import { itemService } from "./ItemService.js";
 
 class NumpadService {
 
@@ -17,8 +18,12 @@ class NumpadService {
       window.alert("Invalid Code!")
       return
     }
+    if (AppState.money < selectedItem.price) {
+      window.alert("Not enough money!")
+      return
+    }
 
-
+    itemService.dispenseItem(selectedItem);
   }
 }
 
