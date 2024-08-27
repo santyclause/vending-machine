@@ -1,10 +1,10 @@
 import { router } from './router-config.js';
-import { HomeController } from './controllers/HomeController.js';
+import { ItemController } from './controllers/ItemController.js';
 const USE_ROUTER = false
 
 class App {
 
-  HomeController = new HomeController()
+  ItemController = new ItemController();
 
   constructor() {
     if (USE_ROUTER) {
