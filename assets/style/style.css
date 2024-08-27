@@ -63,3 +63,14 @@ p {
 .btn-numpad:hover {
   background-color: var(--dark);
 }
+
+.bottom {
+  background-color: var(--dark);
+  height: 10em;
+  padding: 2em;
+}
+
+.output {
+  background-color: var(--darker);
+  height: 100%;
+}

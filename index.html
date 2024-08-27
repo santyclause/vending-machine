@@ -63,27 +63,32 @@
         <div class="numpad-cont container-fluid">
           <!-- SECTION Numpad-->
           <section class="row justify-content-center">
-            <div class="col-12 input-field"></div>
-            <div class="col-4 btn-numpad">7</div>
-            <div class="col-4 btn-numpad">8</div>
-            <div class="col-4 btn-numpad">9</div>
-            <div class="col-4 btn-numpad">4</div>
-            <div class="col-4 btn-numpad">5</div>
-            <div class="col-4 btn-numpad">6</div>
-            <div class="col-4 btn-numpad">1</div>
-            <div class="col-4 btn-numpad">2</div>
-            <div class="col-4 btn-numpad">3</div>
+            <div id="input-field" class="col-12 input-field"></div>
+            <div id="num7" class="col-4 btn-numpad">7</div>
+            <div id="num8" class="col-4 btn-numpad">8</div>
+            <div id="num9" class="col-4 btn-numpad">9</div>
+            <div id="num4" class="col-4 btn-numpad">4</div>
+            <div id="num5" class="col-4 btn-numpad">5</div>
+            <div id="num6" class="col-4 btn-numpad">6</div>
+            <div id="num1" class="col-4 btn-numpad">1</div>
+            <div id="num2" class="col-4 btn-numpad">2</div>
+            <div id="num3" class="col-4 btn-numpad">3</div>
             <div class="col-4 btn-numpad"></div>
-            <div class="col-4 btn-numpad">0</div>
-            <div class="col-4 btn-numpad">ENTER</div>
+            <div id="num0" class="col-4 btn-numpad">0</div>
+            <div id="submit" class="col-4 btn-numpad">ENTER</div>
           </section>
           <!-- !SECTION -->
         </div>
       </div>
-      <section>
-        <!-- Result? -->
-        test
-      </section>
+      <div class="container-fluid">
+        <section class="row bottom">
+          <!-- Result? -->
+          <div class="col-10">
+            <div class="output"></div>
+          </div>
+          <div class="col-2 text-light text-center">Money: $<span>1.00</span></div>
+        </section>
+      </div>
     </div>
   </main>
 
