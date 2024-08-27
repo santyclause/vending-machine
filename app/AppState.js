@@ -11,6 +11,7 @@ class ObservableAppState extends EventEmitter {
     new VendingItem('Cheez-its', 1.25),
     new VendingItem('Gatorade', 1.00)
   ]
+  currentCode = ''
 
 }
 
