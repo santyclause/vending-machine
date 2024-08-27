@@ -25,6 +25,8 @@ p {
   border-radius: 15px;
   border: 2px solid var(--dark);
   margin-bottom: 1em;
+  background-size: cover;
+  background-position: center;
 }
 
 .item-desc {
