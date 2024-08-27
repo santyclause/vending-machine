@@ -5,35 +5,34 @@ export class VendingItem {
     this.name = name;
     this.imageName = name + '.png';
     this.price = price;
-    this.code = this.genCode();
   }
 
   get genCode() {
-    let lastIndex = AppState.usedCodes.length - 1;
-    let foundCode = parseInt(AppState.usedCodes[lastIndex]);
-    let newCode = foundCode++;
-    let codeToString = '';
+    // let lastIndex = AppState.usedCodes.length - 1;
+    // let foundCode = parseInt(AppState.usedCodes[lastIndex]);
+    // let newCode = foundCode++;
+    // let codeToString = '';
 
-    if (newCode < 10) {
-      codeToString = '0';
+    let indexOfItem = (AppState.itemList.findIndex(item => item.name == this.name) + 1)
+
+    if (indexOfItem < 10) {
+      indexOfItem = '0' + indexOfItem.toString();
     }
-    codeToString += newCode.toString();
 
-    AppState.usedCodes.push(codeToString);
-    return codeToString;
+    return indexOfItem;
   }
 
   get elementTemplate() {
     return `
-            <div class="col-2">
+            <div class="col-3">
               <div class="item d-flex align-items-end" style="background-image: url(assets/img/${this.imageName})">
                 <div class="item-desc d-flex justify-content-between align-items-end flex-grow-1">
                   <div>
                     <p>${this.name}</p>
-                    <p>$${this.price}</p>
+                    <p>$${this.price.toFixed(2)}</p>
                   </div>
                   <div>
-                    <p>${this.code}</p>
+                    <p>${this.genCode}</p>
                   </div>
                 </div>
               </div>
