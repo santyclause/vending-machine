@@ -25,6 +25,7 @@ p {
   border-radius: 15px;
   border: 2px solid var(--dark);
   margin-bottom: 1em;
+  margin-top: 1em;
   background-size: cover;
   background-position: center;
 }
@@ -68,11 +69,16 @@ p {
 
 .bottom {
   background-color: var(--dark);
-  height: 10em;
   padding: 2em;
+  min-height: 10em;
 }
 
 .output {
   background-color: var(--darker);
   height: 100%;
+}
+
+.btn-add-money {
+  background-color: var(--primary);
+  border: none;
 }
